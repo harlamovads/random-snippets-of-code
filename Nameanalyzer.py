@@ -82,7 +82,6 @@ if searchmode == "1":
                     pair_us[1].remove(nme)
                     if clist_us[0] not in pair_us[1]:
                         pair_us[1].append(clist_us[0])
-print(dict1)
 
 for wtuki in dict1: # собираем словарь частотности
     for k in range (len(dict1[wtuki])):
