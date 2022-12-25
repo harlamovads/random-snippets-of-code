@@ -1,0 +1,25 @@
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends 'base.html' %}
+{% set active_page = "anketa" %}
+{% block title %} Опрос {% endblock %}
+
+
+{% block content %}
+<form id="form" action="" method="post">
+    <p>{{ form.hidden_tag() }}</p>
+    <p>{{ wtf.form_field(form.age) }}</p>
+    <p>{{ wtf.form_field(form.occupation) }}</p>
+    <p>{{ form.frequency.label }}</p>
+    <p>{{ wtf.form_field(form.frequency) }}</p>
+    <p>{{ wtf.form_field(form.times) }}</p>
+    <p>{{ form.means.label }}</p>
+    <p>{{ wtf.form_field(form.means) }}</p>
+    <p>{{ form.desires.label }}</p>
+    <p>{{ wtf.form_field(form.desires) }}</p>
+    <p>{{ form.preferences.label }}</p>
+    <p>{{ wtf.form_field(form.preferences) }}</p>
+    <button class="btn btn-primary" type=submit>Сохранити <span title="Submit"></span></button>
+</form>
+<p><a href="/"><button type="button" class="btn btn-outline-primary">На главную страницу</button></a></p>
+{% endblock %}
+

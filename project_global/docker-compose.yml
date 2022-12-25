@@ -1,0 +1,14 @@
+version: '3'
+services:
+  flask:
+    build: ./who_flask
+    container_name: flask_app_gen
+    environment:
+      - FLASK_ENV=development
+      - PYTHONUNBUFFERED=True
+    restart: on-failure
+    volumes:
+      - ./who_flask:/who_flask
+    ports:
+      - "5000:5000"
+    command: python run_flask_app.py
